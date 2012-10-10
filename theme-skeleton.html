@@ -13,10 +13,12 @@
   <body>
 
     <header>
-      <h1><a href="/">{Title}</a></h1>
-      {block:Description}
-        <p><a href="">{Description}</a></p>
-      {/block:Description}
+      <hgroup>
+        <h1><a href="/">{Title}</a></h1>
+        {block:Description}
+          <h2>{Description}</h2>
+        {/block:Description}
+      </hgroup>
     </header>
 
     <section class="posts">
