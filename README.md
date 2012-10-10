@@ -1,4 +1,4 @@
-Tumblr-skeleton
+Tumblr Theme Skeleton
 =====================
 
 HTML5 Skeleton for building a tumblr theme.
