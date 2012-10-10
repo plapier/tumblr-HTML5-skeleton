@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}">
+  </head>
+
+  <body>
+
+    <header>
+      <h1><a href="/"></a></h1>
+      {block:Description}
+        <p><a href="">{Description}</a></p>
+      {/block:Description}
+    </header>
+
+    <section class="posts">
+      {block:Posts}
+
+        {block:Regular}
+        <article class="regular post">
+          {block:Title}<h2 class="title">{Title}</h2>{/block:Title}
+          {Body}
+
+          <section class="post-meta">
+            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          </section>
+        </article>
+        {/block:Regular}
+
+        {block:Photo}
+        <article class="photo post">
+          <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
+
+          <section class="post-meta">
+            <div class="caption">{Caption}</div>
+            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          </section>
+        </article>
+        {/block:Photo}
+
+        {block:Quote}
+        <article class="quote {length} post">
+          <div class="quoteactual"><q>{Quote}</q></div>
+
+          <section class="post-meta">
+            <div class="source"><span class="emdash">&mdash;</span>{Source}</div>
+            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          </section>
+        </article>
+        {/block:Quote}
+
+        {block:Link}
+        <article class="link post">
+          <p><a href="{URL}" class="link" {Target}>{Name}</a></p>
+          <div class="description">{Description}</div>
+          <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+        </article>
+        {/block:Link}
+
+        {block:Conversation}
+        <article class="conversation content">
+          <ul>
+            {block:Lines}
+            <li class="{Alt}">
+              {block:Label}<span class="label">{Label}</span>{/block:Label}
+            {Line}
+            </li>
+            {/block:Lines}
+          </ul>
+          <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+        </article>
+        {/block:Conversation}
+
+        {block:Audio}
+        <article class="audio post">
+          {AudioPlayerWhite}
+          <div class="caption">{block:Caption}{Caption}{/block:Caption}{block:ExternalAudio} [<a href="{ExternalAudioURL}">Download</a>]{/block:ExternalAudio}</div>
+          <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+        </article>
+        {/block:Audio}
+
+        {block:Video}
+        <article class="video post">
+          {Video-500}
+
+          <section class="post-meta">
+            <div class="caption">{Caption}</div>
+            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          </section>
+        </article>
+        {/block:Video}
+      {/block:Posts}
+
+      {block:Pagination}
+      <div id="pagination">
+        <div id="older-link">{block:NextPage}<a href="{NextPage}">&larr; Older</a>{/block:NextPage}</div>
+        <div id="page-count">{CurrentPage} <span>of</span> {TotalPages}</div>
+        <div id="newer-link">{block:PreviousPage}<a href="{PreviousPage}">Newer &rarr;</a>{/block:PreviousPage}</div>
+      </div>
+      {/block:Pagination}
+    </section>
+
+  </body>
+</html>
