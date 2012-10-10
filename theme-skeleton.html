@@ -30,7 +30,7 @@
           {Body}
 
           <section class="post-meta">
-            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
           </section>
         </article>
         {/block:Regular}
@@ -41,7 +41,7 @@
 
           <section class="post-meta">
             <div class="caption">{Caption}</div>
-            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
           </section>
         </article>
         {/block:Photo}
@@ -52,7 +52,7 @@
 
           <section class="post-meta">
             <div class="source"><span class="emdash">&mdash;</span>{Source}</div>
-            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
           </section>
         </article>
         {/block:Quote}
@@ -61,7 +61,7 @@
         <article class="link post">
           <p><a href="{URL}" class="link" {Target}>{Name}</a></p>
           <div class="description">{Description}</div>
-          <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
         </article>
         {/block:Link}
 
@@ -75,7 +75,7 @@
             </li>
             {/block:Lines}
           </ul>
-          <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
         </article>
         {/block:Conversation}
 
@@ -83,7 +83,7 @@
         <article class="audio post">
           {AudioPlayerWhite}
           <div class="caption">{block:Caption}{Caption}{/block:Caption}{block:ExternalAudio} [<a href="{ExternalAudioURL}">Download</a>]{/block:ExternalAudio}</div>
-          <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
         </article>
         {/block:Audio}
 
@@ -93,7 +93,7 @@
 
           <section class="post-meta">
             <div class="caption">{Caption}</div>
-            <p class="permalink"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></p>
+            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
           </section>
         </article>
         {/block:Video}
